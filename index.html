@@ -19,14 +19,12 @@
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr>
 	<script>
 		body = document.getElementById("body");
+		body.onclick = function(){
+			window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ","_blank");
+		}
 		var i = 0;
-		var s = 0;
 		var r1 = 0;
-		var g1 = 0;
-		var b1 = 0;
 		var r2 = 130;
-		var g2 = 130;
-		var b2 = 130;
 		looping = function(){
 			i=(i+0.01)%360;
 			r1 = 50*Math.sin(i) + 0;
