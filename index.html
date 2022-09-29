@@ -28,13 +28,13 @@
 		var g2 = 130;
 		var b2 = 130;
 		looping = function(){
-			i=(i+0.1)%360;
+			i=(i+0.01)%360;
 			r1 = 50*Math.sin(i) + 0;
 			r2 = 50*Math.cos(i) + 50;
 			body.style.backgroundImage = "linear-gradient(rgba("+r1.toString()+", "+r1.toString()+", "+r1.toString()+", 0.5), rgba("+r2.toString()+", "+r2.toString()+", "+r2.toString()+", 0.5))";
 			setTimeout(function(){
 				looping();
-			}, 100);
+			}, 10);
 		}
 		looping();
 	</script>
