@@ -38,9 +38,7 @@
 			g2 = 150*cos + 150;
 			b2 = 150*cos + 150;
 			body.style.backgroundImage = "linear-gradient(rgba("+r1.toString()+", "+g1.toString()+", "+b1.toString()+", 0.5), rgba("+r2.toString()+", "+g2.toString()+", "+b2.toString()+", 0.5))";
-			setTimeout(function(){
-				looping();
-			}, 10);
+			setTimeout(looping, 10);
 		}
 		looping();
 	</script>

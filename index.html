@@ -36,9 +36,7 @@
 			r2 = 127*Math.cos(i) + 127;
 			body.style.backgroundImage = "linear-gradient("+(i2).toString()+"deg,rgba("+r1.toString()+", "+r1.toString()+", "+(100).toString()+", 0.5), rgba("+r2.toString()+", "+r2.toString()+", "+(100).toString()+", 0.5)), url(\"./background.png\")";
 
-			setTimeout(function(){
-				looping();
-			}, 10);
+			setTimeout(looping, 10);
 		}
 		looping();
 	</script>
