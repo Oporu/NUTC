@@ -5,15 +5,18 @@ body{
 table{
 	border-collapse: collapse;
 }
-th {
+th{
 	background-color: #000;
+	font-size: 14px;
+	font-weight: bold;
 	color: #FFF;
 }
-td {
+td{
     border: 1px solid #333;
 	background-color: #fff;
+	text-align: center;
 }
-tfoot {
+tfoot{
     background-color: #333;
     color: #fff;
 }
