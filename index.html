@@ -13,8 +13,8 @@
 		<p>班級: 資工一甲</p> 
 		<p>學號: 1111032044</p>
 		<p>姓名: 劉柏緯</p>
-		<p><a href="./test1.html">test1</a></p>
-		<p><a href="./homework2.html">homework2</a></p>
+		<p><a href="./test1/">test1</a></p>
+		<p><a href="./homework2/">homework2</a></p>
 		<button onclick="rickroll()">.w.</button>
 	</center></b></font>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr>
@@ -26,16 +26,11 @@
 			window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ","_blank");
 		}
 		looping = function(){
-			//i=(i+0.01)%360;
-			//r1 = 50*Math.sin(i) + 0;
-			//r2 = 50*Math.cos(i) + 50;
-			//body.style.backgroundImage = "linear-gradient(rgba("+r1.toString()+", "+r1.toString()+", "+r1.toString()+", 0.5), rgba("+r2.toString()+", "+r2.toString()+", "+r2.toString()+", 0.5))";
 			i = (i+0.0125)%360;
 			i2 = (i2+0.5)%360;
 			r1 = 127*Math.sin(i) + 127;
 			r2 = 127*Math.cos(i) + 127;
 			body.style.backgroundImage = "linear-gradient("+(i2).toString()+"deg,rgba("+r1.toString()+", "+r1.toString()+", "+(100).toString()+", 0.5), rgba("+r2.toString()+", "+r2.toString()+", "+(100).toString()+", 0.5)), url(\"./background.png\")";
-
 			setTimeout(looping, 10);
 		}
 		looping();
