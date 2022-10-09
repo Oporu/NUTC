@@ -19,7 +19,7 @@
 		<button onclick="rickroll()">.w.</button>
 	</center></b></font>
 	<script>
-		body = document.getElementById("body");
+		html = document.documentElement;
 		var i = 0;
 		var i2 = 0;
 		rickroll = function(){
@@ -30,7 +30,7 @@
 			i2 = (i2+0.5)%360;
 			r1 = 127*Math.sin(i) + 127;
 			r2 = 127*Math.cos(i) + 127;
-			body.style.backgroundImage = "linear-gradient("+(i2).toString()+"deg,rgba("+r1.toString()+", "+r1.toString()+", "+(100).toString()+", 0.5), rgba("+r2.toString()+", "+r2.toString()+", "+(100).toString()+", 0.5)), url(\"./background.png\")";
+			html.style.backgroundImage = "linear-gradient("+(i2).toString()+"deg,rgba("+r1.toString()+", "+r1.toString()+", "+(100).toString()+", 0.5), rgba("+r2.toString()+", "+r2.toString()+", "+(100).toString()+", 0.5)), url(\"./background.png\")";
 			setTimeout(looping, 10);
 		}
 		looping();

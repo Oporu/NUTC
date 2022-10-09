@@ -33,9 +33,10 @@
 		</table>
 	</b></center>
 	<script>
-		body = document.getElementById("body");
+		html = document.documentElement;
 		img = document.getElementById("img");
-		body.onclick = function(){
+		
+		html.onclick = function(){
 			window.open("../","_self");
 		}
 		var i = 0;
@@ -56,7 +57,7 @@
 			r2 = 150*cos + 50;
 			g2 = 150*cos + 150;
 			b2 = 150*cos + 150;
-			body.style.backgroundImage = "linear-gradient(rgba("+r1.toString()+", "+g1.toString()+", "+b1.toString()+", 0.5), rgba("+r2.toString()+", "+g2.toString()+", "+b2.toString()+", 0.5))";
+			html.style.backgroundImage = "linear-gradient(rgba("+r1.toString()+", "+g1.toString()+", "+b1.toString()+", 0.5), rgba("+r2.toString()+", "+g2.toString()+", "+b2.toString()+", 0.5))";
 			img.style.transform = "rotate("+(Math.sin(i)*180+180).toString()+"deg)";
 			setTimeout(looping, 10);
 		}
