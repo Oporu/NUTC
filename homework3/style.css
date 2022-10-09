@@ -20,3 +20,8 @@ table tfoot{
     background-color: #333;
     color: #fff;
 }
+ul {
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+  }
