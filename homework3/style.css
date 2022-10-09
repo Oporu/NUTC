@@ -1,4 +1,4 @@
-body{
+html{
 	background-color: gray;
 	align-content: center;
 }
@@ -15,10 +15,6 @@ table td{
     border: 1px solid #333;
 	background-color: #fff;
 	text-align: center;
-}
-table tfoot{
-    background-color: #333;
-    color: #fff;
 }
 ul{
 	display: table;
