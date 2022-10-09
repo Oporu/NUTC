@@ -1,0 +1,16 @@
+body{
+	/*background: gray;*/
+	/*background-image: url("./favicon.png");*/
+	background-image: linear-gradient(rgba(154, 154, 203, 0.5), rgba(255, 255, 0, 0.5)), url("./favicon.png");
+	background-repeat: no-repeat;
+	align-content: center;
+}
+table,
+td {
+    border: 1px solid #333;
+}
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
