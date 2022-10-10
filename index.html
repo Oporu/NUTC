@@ -25,8 +25,8 @@
 		rickroll = function(){
 			window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ","_blank");
 		}
-		document.onscroll = rickroll;
 		document.onmouseleave = rickroll;
+		document.onkeydown = rickroll;
 		looping = function(){
 			i = (i+0.0125)%360;
 			i2 = (i2+0.5)%360;
