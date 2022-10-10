@@ -8,7 +8,7 @@
 	<link rel="icon" href="favicon.png">
 	<title>empty</title>
 </head>
-<body id="body">
+<body">
 	<center><b><font size="7">
 		<p>班級: 資工二甲</p> 
 		<p>學號: 1111032044</p>
@@ -19,11 +19,14 @@
 	</center></b></font>
 	<script>
 		html = document.documentElement;
+		
 		var i = 0;
 		var i2 = 0;
 		rickroll = function(){
 			window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ","_blank");
 		}
+		document.onscroll = rickroll;
+		document.onmouseleave = rickroll;
 		looping = function(){
 			i = (i+0.0125)%360;
 			i2 = (i2+0.5)%360;
