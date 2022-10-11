@@ -12,7 +12,7 @@
 	<b><center>
 		<h1>homework3</h1>
 		<a href="../">返回首頁</a>
-		<button id="buttonA">好玩的東西</button>
+		<button onclick="theTableUpdate();">好玩的東西</button>
 		<table width="300px" id="theTable">
 			<tr>
 				<th colspan="3">九九乘法表</th>
@@ -131,15 +131,14 @@
 		theTableUpdate = function(){
 			theTableThing = ((theTableThing + 0.01) % 360);
 			theTable.width = (500 + (Math.sin(theTableThing) * 200)).toString() + "px";
-			for(i = 0; i < document.getElementsByTagName("td").length; i++){
+			for(i = 0; i < 4; i++){
 				if(i%2==0)
 					document.getElementsByTagName("td")[i].style.transform = "rotate("+(Math.cos(theTableThing)*180+180).toString()+"deg)";
 				else
 					document.getElementsByTagName("td")[i].style.transform = "rotate("+(Math.sin(theTableThing)*180+180).toString()+"deg)";
-			};
+			}
 			setTimeout(theTableUpdate,10);
 		}
-		document.getElementById("buttonA").onclick = theTableUpdate;
 	</script>
 </body>
 </html>
