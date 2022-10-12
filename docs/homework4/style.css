@@ -18,7 +18,7 @@ a:active{
 }
 div{
 	display: block;
-	overflow: hidden;
+	position: relative;
 }
 div#box{
 	align-items: center;
