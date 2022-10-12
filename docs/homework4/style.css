@@ -1,0 +1,63 @@
+html{
+	background-color: gray;
+	align-content: center;
+}
+a{
+	background-color: lightgray;
+	color: black;
+	text-decoration: none;
+	transition-duration: 0.4s;
+	border-radius: 8px;
+}
+a:hover{
+	background-color: gray;
+}
+a:active{
+	background-color: rgb(100, 100, 100);
+	transition-duration: 0.2s;
+}
+div{
+	display: block;
+	overflow: hidden;
+}
+div#box{
+	align-items: center;
+}
+div#header{
+	background-color: orange;
+	height: 100px;
+	width: 800px;
+	position: relative;
+}
+div#nav{
+	background-color: deeppink;
+	width: 800px;
+	height: 50px;
+}
+div#aside{
+	background-color: pink;
+	width: 200px;
+	height: 300px;
+	position: relative;
+	float: left;
+}
+div#Article{
+	background-color: deepskyblue;
+	width: 600px;
+	height: 300px;
+	float: left;
+}
+div#section{
+	background-color: yellow;
+	display: inline-block;
+	width: 600px;
+	height: 100px;
+	position: relative;
+	bottom: -180px;
+}
+div#footer{
+	background-color: darkseagreen;
+	width: 800px;
+	height: 100px;
+	clear: left;
+}
