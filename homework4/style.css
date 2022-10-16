@@ -14,9 +14,12 @@ a:active{
 	transition-duration: 0.2s;}
 div{
 	display: block;
-	position: relative;}
+	position: relative;
+	margin: 2px}
 div#box{
 	margin-left: 25%;}
+div#boxInsideBox{
+	display: flex;}
 div#header{
 	background-color: orange;
 	height: 100px;
