@@ -15,37 +15,36 @@ a:active{
 div{
 	display: block;
 	position: relative;
-	margin: 2px;}
+	text-align: left;
+	margin: 2px}
 div#box{
-	margin-left: 25%;}
+	width: 800px;
+	height: 600px;
+	background-color: white}
 div#boxInsideBox{
-	display: flex;}
+	display: flex;
+	margin: 0px}
 div#header{
 	background-color: orange;
-	height: 100px;
-	width: 800px;}
+	height: 100px}
 div#nav{
 	background-color: deeppink;
-	width: 800px;
-	height: 50px;}
+	height: 50px}
 div#aside{
 	background-color: pink;
-	width: 200px;
+	width: 20%;
 	height: 300px;
-	float: left;}
+	float: left}
 div#Article{
 	background-color: deepskyblue;
-	width: 600px;
+	width: 80%;
 	height: 300px;
-	float: left;}
+	float: left}
 div#section{
 	background-color: yellow;
-	display: inline-block;
-	width: 600px;
-	height: 100px;
-	bottom: -180px;}
+	height: 30%;
+	bottom: -62.5%}
 div#footer{
 	background-color: darkseagreen;
-	width: 800px;
 	height: 100px;
-	clear: left;}
+	clear: left}
