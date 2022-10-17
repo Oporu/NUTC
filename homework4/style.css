@@ -1,15 +1,15 @@
 html{
 	background-color: gray;
 	align-content: center;}
-a{
+a.button{
 	background-color: lightgray;
 	color: black;
 	text-decoration: none;
 	transition-duration: 0.4s;
 	border-radius: 8px;}
-a:hover{
+a.button:hover{
 	background-color: gray;}
-a:active{
+a.button:active{
 	background-color: rgb(100, 100, 100);
 	transition-duration: 0.2s;}
 div{
