@@ -17,5 +17,5 @@ fetch("https://api.countapi.xyz/hit/oporu.github.io/NUTC")
 	.then(function(response) {
 		return response.json();
 	}).then(function(data) {
-		document.getElementById("visits").innerText = data.value + "visits";
+		document.getElementById("visits").innerText = data.value + " visits";
 });
