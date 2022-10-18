@@ -1,17 +1,17 @@
 html{
 	background-color: gray;
-	align-content: center;}
+	align-content: center}
 a.button{
 	background-color: lightgray;
 	color: black;
 	text-decoration: none;
 	transition-duration: 0.4s;
-	border-radius: 8px;}
+	border-radius: 8px}
 a.button:hover{
-	background-color: gray;}
+	background-color: gray}
 a.button:active{
 	background-color: rgb(100, 100, 100);
-	transition-duration: 0.2s;}
+	transition-duration: 0.2s}
 div{
 	display: block;
 	position: relative;
