@@ -15,3 +15,14 @@ function looping(){
 	setTimeout(looping, 10);
 }
 looping();
+/*
+function cb(response){
+    document.getElementById('visits').innerText = response.value;
+}
+<script async src="https://api.countapi.xyz/hit/oporu.github.io/visits?callback=cb"></script>
+*/
+fetch("https://api.countapi.xyz/hit/oporu.github.io/").then(function(response) {
+	return response.json();
+  }).then(function(data) {
+	console.log(data);
+  });
