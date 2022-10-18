@@ -13,7 +13,7 @@ function looping(){
 }
 document.onkeydown = rickroll;
 looping();
-fetch("https://api.countapi.xyz/hit/oporu.github.io/NUTC")
+fetch("https://api.countapi.xyz/hit/oporu.github.io/NUTC/")
 	.then(function(response) {
 		return response.json();
 	}).then(function(data) {
