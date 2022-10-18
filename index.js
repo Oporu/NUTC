@@ -21,8 +21,8 @@ function cb(response){
 }
 <script async src="https://api.countapi.xyz/hit/oporu.github.io/visits?callback=cb"></script>
 */
-fetch("https://api.countapi.xyz/hit/oporu.github.io/").then(function(response) {
+fetch("https://api.countapi.xyz/hit/oporu.github.io/NUTC").then(function(response) {
 	return response.json();
   }).then(function(data) {
-	console.log(data);
+	document.getElementById("views").innerText = data.value;
   });
