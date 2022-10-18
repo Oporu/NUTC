@@ -2,6 +2,9 @@ function rickroll(){
 	window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ","_blank");
 }
 function looping(){
+	var i = 0;
+	var i2 = 0;
+	
 	i = (i+0.0125)%360;
 	i2 = (i2+0.5)%360;
 	r1 = 127*(1+Math.sin(i));
