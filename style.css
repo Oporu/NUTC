@@ -1,12 +1,12 @@
 html{
 	background-image: linear-gradient(rgba(154, 154, 203, 0.5), rgba(255, 255, 0, 0.5)), url("./background.png");
 	background-repeat: no-repeat;
-	align-items: center;
 	height: 100%;
 }
 body{
 	background-color: initial;
 }
+/*
 a.button{
 	background-color: lightgray;
 	color: black;
@@ -21,3 +21,4 @@ a.button:active{
 	background-color: rgb(100, 100, 100);
 	transition-duration: 0.2s;
 }
+*/
