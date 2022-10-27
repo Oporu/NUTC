@@ -23,6 +23,10 @@
 		<symbol id="line" viewBox="0 0 448 512">
 			<path d="M272.1 204.2v71.1c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.1 0-2.1-.6-2.6-1.3l-32.6-44v42.2c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.8 0-3.2-1.4-3.2-3.2v-71.1c0-1.8 1.4-3.2 3.2-3.2H219c1 0 2.1.5 2.6 1.4l32.6 44v-42.2c0-1.8 1.4-3.2 3.2-3.2h11.4c1.8-.1 3.3 1.4 3.3 3.1zm-82-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 1.8 1.4 3.2 3.2 3.2h11.4c1.8 0 3.2-1.4 3.2-3.2v-71.1c0-1.7-1.4-3.2-3.2-3.2zm-27.5 59.6h-31.1v-56.4c0-1.8-1.4-3.2-3.2-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 .9.3 1.6.9 2.2.6.5 1.3.9 2.2.9h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.7-1.4-3.2-3.1-3.2zM332.1 201h-45.7c-1.7 0-3.2 1.4-3.2 3.2v71.1c0 1.7 1.4 3.2 3.2 3.2h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2V234c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2v-11.4c-.1-1.7-1.5-3.2-3.2-3.2zM448 113.7V399c-.1 44.8-36.8 81.1-81.7 81H81c-44.8-.1-81.1-36.9-81-81.7V113c.1-44.8 36.9-81.1 81.7-81H367c44.8.1 81.1 36.8 81 81.7zm-61.6 122.6c0-73-73.2-132.4-163.1-132.4-89.9 0-163.1 59.4-163.1 132.4 0 65.4 58 120.2 136.4 130.6 19.1 4.1 16.9 11.1 12.6 36.8-.7 4.1-3.3 16.1 14.1 8.8 17.4-7.3 93.9-55.3 128.2-94.7 23.6-26 34.9-52.3 34.9-81.5z"/>
 		</symbol>
+		<symbol id="tag" viewBox="0 0 16 16">
+			<path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+			<path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z"/>
+		</symbol>
 	</svg>
 	<header>
 		<nav class="navbar navbar-expand bg-info justify-content-between px-3">
@@ -55,7 +59,7 @@
 		</div>
 		<div class="container d-flex">
 			<div class="row align-items-md-stretch">
-				<div class="col-md-9">
+				<div class="col-md-8">
 					<div class="h-100 p-2 text-bg-light border rounded-3">
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde quod sunt dolor similique voluptas iure ab quam accusantium. Aperiam eius consectetur eveniet excepturi quaerat sequi iusto ratione porro aliquam odio.
 						<h3 class="text-secondary"><b>副標題</b></h3>
@@ -71,18 +75,18 @@
 						<div class="p-2 text-bg-light border rounded-1">
 							<div class="border p-2">留言板</div>
 							<div class="border p-2 text-bg-white">
-								<div class="container d-flex">
+								<div class="container d-flex p-1">
 									<picture style="width: 20%">
 										<source srcset="https://via.placeholder.com/1300x1300?text=ummm">
 										<img src="image source" class="img-fluid mx-auto d-block pt-5" alt="image desc">
 									</picture>
 									<div class="mb-3 container-fluid">
-									  <label for="留言內容" class="form-label">留言內容</label>
-									  <textarea class="form-control" name="" id="" rows="6"></textarea>
-									  <input name="" id="" class="btn border container-fluid" type="button" value="提交">
+										<label for="留言內容" class="form-label">留言內容</label>
+										<textarea class="form-control" name="" id="" rows="6"></textarea>
+										<input name="" id="" class="btn border container-fluid" type="button" value="提交">
 									</div>
 								</div>
-								<div class="container d-flex">
+								<div class="container d-flex p-1">
 									<picture style="width: 20%">
 										<source srcset="https://via.placeholder.com/1300x1300?text=ummm">
 										<img src="image source" class="img-fluid mx-auto d-block" alt="image desc">
@@ -92,23 +96,36 @@
 										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam id molestiae dicta veritatis aliquid harum quae sequi iure exercitationem nobis architecto, voluptatum dolores, cum illum quidem molestias vitae sit totam.
 									</div>
 								</div>
-								<div class="container d-flex">
+								<div class="container d-flex p-1">
 									<picture style="width: 20%">
 										<source srcset="https://via.placeholder.com/1300x1300?text=ummm">
 										<img src="image source" class="img-fluid mx-auto d-block" alt="image desc">
 									</picture>
 									<div class="mb-3 container-fluid">
 										<h5>Media heading</h5>
-										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam id molestiae dicta veritatis aliquid harum quae sequi iure exercitationem nobis architecto, voluptatum dolores, cum illum quidem molestias vitae sit totam.
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aut similique odio dolore nostrum, nam suscipit tempora. Quisquam temporibus est optio iure, magnam rerum fuga voluptate eveniet quas provident quaerat.	
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-4">
 					<div class="p-3 text-bg-light border rounded-3">
-						<b>Tags</b>
+						<h4><b>Tags</b></h4>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white"><use xlink:href="#tag"/></svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white"><use xlink:href="#tag"/></svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white"><use xlink:href="#tag"/></svg>Badgesadasd</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white"><use xlink:href="#tag"/></svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white"><use xlink:href="#tag"/></svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white"><use xlink:href="#tag"/></svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white"><use xlink:href="#tag"/></svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white"><use xlink:href="#tag"/></svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white"><use xlink:href="#tag"/></svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white"><use xlink:href="#tag"/></svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white"><use xlink:href="#tag"/></svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white"><use xlink:href="#tag"/></svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white"><use xlink:href="#tag"/></svg>Badge</a>
 					</div>
 				</div>
 			</div>
