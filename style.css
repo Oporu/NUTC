@@ -33,6 +33,6 @@ a.button:active{
 */
 .dropdown-menu {
 	transition: 5s cubic-bezier(0.5, 5, 0.5, -3);
-  }
+}
   
   
