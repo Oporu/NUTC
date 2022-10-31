@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="../favicon.ico">
+	<title>empty - homework5</title>
+</head>
+
+<body>
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+		<symbol id="facebook" viewBox="0 0 448 512">
+			<path
+				d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" />
+		</symbol>
+		<symbol id="twitter" viewBox="0 0 16 16">
+			<path
+				d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+		</symbol>
+		<symbol id="qq" viewBox="0 0 448 512">
+			<path
+				d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z" />
+		</symbol>
+		<symbol id="line" viewBox="0 0 448 512">
+			<path
+				d="M272.1 204.2v71.1c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.1 0-2.1-.6-2.6-1.3l-32.6-44v42.2c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.8 0-3.2-1.4-3.2-3.2v-71.1c0-1.8 1.4-3.2 3.2-3.2H219c1 0 2.1.5 2.6 1.4l32.6 44v-42.2c0-1.8 1.4-3.2 3.2-3.2h11.4c1.8-.1 3.3 1.4 3.3 3.1zm-82-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 1.8 1.4 3.2 3.2 3.2h11.4c1.8 0 3.2-1.4 3.2-3.2v-71.1c0-1.7-1.4-3.2-3.2-3.2zm-27.5 59.6h-31.1v-56.4c0-1.8-1.4-3.2-3.2-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 .9.3 1.6.9 2.2.6.5 1.3.9 2.2.9h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.7-1.4-3.2-3.1-3.2zM332.1 201h-45.7c-1.7 0-3.2 1.4-3.2 3.2v71.1c0 1.7 1.4 3.2 3.2 3.2h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2V234c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2v-11.4c-.1-1.7-1.5-3.2-3.2-3.2zM448 113.7V399c-.1 44.8-36.8 81.1-81.7 81H81c-44.8-.1-81.1-36.9-81-81.7V113c.1-44.8 36.9-81.1 81.7-81H367c44.8.1 81.1 36.8 81 81.7zm-61.6 122.6c0-73-73.2-132.4-163.1-132.4-89.9 0-163.1 59.4-163.1 132.4 0 65.4 58 120.2 136.4 130.6 19.1 4.1 16.9 11.1 12.6 36.8-.7 4.1-3.3 16.1 14.1 8.8 17.4-7.3 93.9-55.3 128.2-94.7 23.6-26 34.9-52.3 34.9-81.5z" />
+		</symbol>
+		<symbol id="tag" viewBox="0 0 16 16">
+			<path
+				d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+			<path
+				d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
+		</symbol>
+		<symbol id="wifi" viewBox="0 0 16 16">
+			<path
+				d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z" />
+			<path
+				d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z" />
+		</symbol>
+	</svg>
+	<header>
+		<nav class="navbar navbar-expand bg-info justify-content-between px-3">
+			<div class="nav navbar-brand text-white"><svg class="bi" width="24" height="24"
+					style="transform: rotate(45deg);" fill="white">
+					<use xlink:href="#wifi" />
+				</svg>部落格排版</div>
+			<div class="nav navbar-nav">
+				<a class="nav-item nav-link active text-white" href="../">Home</a>
+				<a class="nav-item nav-link disabled" href="../">Link</a>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<div class="container">
+			<nav class="breadcrumb">
+				<a class="breadcrumb-item" href="../">Home</a>
+				<a class="breadcrumb-item" href="#劉柏緯">Library</a>
+				<span class="breadcrumb-item active" aria-current="page">Data</span>
+			</nav>
+			<h1 class="text-info"><b>部落格標題</b></h1>
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0dcaf0" class="bi bi-person-fill"
+				viewBox="0 0 16 16">
+				<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+			</svg>作者&nbsp;
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0dcaf0" class="bi bi-clock"
+				viewBox="0 0 16 16">
+				<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+				<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+			</svg>2019-06-05&nbsp;
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0dcaf0" class="bi bi-tags-fill"
+				viewBox="0 0 16 16">
+				<path
+					d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+				<path
+					d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
+			</svg>blog
+		</div>
+		<div class="container d-flex">
+			<div class="row align-items-md-stretch">
+				<div class="col-md-8">
+					<div class="h-100 p-2 text-bg-light border rounded-3">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde quod sunt dolor similique
+						voluptas iure ab quam accusantium. Aperiam eius consectetur eveniet excepturi quaerat sequi
+						iusto ratione porro aliquam odio.
+						<h3 class="text-secondary"><b>副標題</b></h3>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste temporibus placeat architecto quo,
+						officiis, nemo nam, aliquam ipsa vero magnam quam libero quasi. Earum modi in libero aspernatur
+						deleniti doloribus!
+						<ul>
+							<li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat natus quo quis qui
+								dolorem eveniet. Asperiores deserunt sequi saepe accusantium ea incidunt quis error
+								natus ut? Corporis aperiam nemo modi!</li>
+							<li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi aperiam dolorem
+								voluptatem quas ipsum cumque, tempora debitis suscipit sunt tempore, maiores sit nihil
+								pariatur porro illo repellat et odit itaque.</li>
+							<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum commodi sapiente illo
+								aut earum eaque pariatur, exercitationem qui temporibus quae sunt nihil itaque fugiat
+								voluptates repellat aspernatur. Nihil, porro saepe.</li>
+							<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nisi suscipit
+								saepe quasi nulla? Deserunt veritatis amet dolorem et dicta optio, ea, alias odit dolore
+								corrupti, sunt distinctio incidunt? Architecto!</li>
+							<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero nostrum accusantium a
+								temporibus nam dolorem consequuntur praesentium ut perspiciatis, fuga labore sapiente
+								ratione maxime ipsam quo voluptas minus ab dignissimos?</li>
+						</ul>
+						<img src="https://via.placeholder.com/1500x300?text=ummm" class="img-fluid" width="100%"
+							alt="ummm">
+						<div class="p-2 text-bg-light border rounded-1">
+							<div class="border p-2">留言板</div>
+							<div class="border p-2 text-bg-white">
+								<div class="container d-flex p-1">
+									<picture style="width: 20%">
+										<source srcset="https://via.placeholder.com/1300x1300?text=ummm">
+										<img src="image source" class="img-fluid mx-auto d-block pt-5" alt="image desc">
+									</picture>
+									<div class="mb-3 container-fluid">
+										<label for="留言內容" class="form-label">留言內容</label>
+										<textarea class="form-control" name="" id="" rows="6"></textarea>
+										<input name="" id="" class="btn border container-fluid" type="button"
+											value="提交">
+									</div>
+								</div>
+								<div class="container d-flex p-1">
+									<picture style="width: 20%">
+										<source srcset="https://via.placeholder.com/1300x1300?text=ummm">
+										<img src="image source" class="img-fluid mx-auto d-block" alt="image desc">
+									</picture>
+									<div class="mb-3 container-fluid">
+										<h5>Media heading</h5>
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam id molestiae
+										dicta veritatis aliquid harum quae sequi iure exercitationem nobis architecto,
+										voluptatum dolores, cum illum quidem molestias vitae sit totam.
+									</div>
+								</div>
+								<div class="container d-flex p-1">
+									<picture style="width: 20%">
+										<source srcset="https://via.placeholder.com/1300x1300?text=ummm">
+										<img src="image source" class="img-fluid mx-auto d-block" alt="image desc">
+									</picture>
+									<div class="mb-3 container-fluid">
+										<h5>Media heading</h5>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aut
+										similique odio dolore nostrum, nam suscipit tempora. Quisquam temporibus est
+										optio iure, magnam rerum fuga voluptate eveniet quas provident quaerat.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="p-3 text-bg-light border rounded-3">
+						<h4><b>Tags</b></h4>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white">
+								<use xlink:href="#tag" />
+							</svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white">
+								<use xlink:href="#tag" />
+							</svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white">
+								<use xlink:href="#tag" />
+							</svg>Badgesadasd</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white">
+								<use xlink:href="#tag" />
+							</svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white">
+								<use xlink:href="#tag" />
+							</svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white">
+								<use xlink:href="#tag" />
+							</svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white">
+								<use xlink:href="#tag" />
+							</svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white">
+								<use xlink:href="#tag" />
+							</svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white">
+								<use xlink:href="#tag" />
+							</svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white">
+								<use xlink:href="#tag" />
+							</svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white">
+								<use xlink:href="#tag" />
+							</svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white">
+								<use xlink:href="#tag" />
+							</svg>Badge</a>
+						<a href="#劉柏緯" class="btn badge bg-info"><svg class="bi" width="16" height="16" fill="white">
+								<use xlink:href="#tag" />
+							</svg>Badge</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="container d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+			<p class="text-secondary"><b>版權宣告</p>
+			</p>
+			<ul class="list-unstyled d-flex">
+				<li class="ms-3"><a class="link-dark" href="#劉柏緯"><svg class="bi" width="24" height="24" fill="#0dcaf0">
+							<use xlink:href="#facebook" />
+						</svg></a></li>
+				<li class="ms-3"><a class="link-dark" href="#劉柏緯"><svg class="bi" width="24" height="24" fill="#0dcaf0">
+							<use xlink:href="#twitter" />
+						</svg></a></li>
+				<li class="ms-3"><a class="link-dark" href="#劉柏緯"><svg class="bi" width="24" height="24" fill="#0dcaf0">
+							<use xlink:href="#qq" />
+						</svg></a></li>
+				<li class="ms-3"><a class="link-dark" href="#劉柏緯"><svg class="bi" width="24" height="24" fill="#0dcaf0">
+							<use xlink:href="#line" />
+						</svg></a></li>
+			</ul>
+		</div>
+	</footer>
+	<script src="script.js"></script>
+</body>
+
+</html>
