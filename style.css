@@ -12,6 +12,9 @@ body{
 	height: 1200px;
 	align-self: center;
 }
+#content{
+	display: none;
+}
 /*
 a.button{
 	background-color: lightgray;
