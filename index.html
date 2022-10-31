@@ -8,37 +8,48 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" href="favicon.png">
-	<script src="script.js"></script>
+	
 	<title>empty</title>
 </head>
 <body>
-	<center><b><font size="7">
-		<div>班級: 資工二甲</div>
-		<div>學號: 1111032044</div>
-		<div>姓名: 劉柏緯</div></b>
-		<br>
-		<div id="visits"> </div>
-		<div class="dropdown-center">
-			<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="homeworks">
-			homeworks
-			</button>
-			<ul class="dropdown-menu dropdown-menu-dark bg-secondary">
-				<li><a class="dropdown-item text-white" href="./">homework1</a></li>
-				<li><a class="dropdown-item text-white" href="./homework2/">homework2</a></li>
-				<li><a class="dropdown-item text-white" href="./homework3/">homework3</a></li>
-				<li><a class="dropdown-item text-white" href="./homework4/">homework4</a></li>
-				<li><a class="dropdown-item text-white" href="./homework5/">homework5</a></li>
-				<li><a class="dropdown-item text-white" href="./homework6/">homework6</a></li>
-				<li><a class="dropdown-item disabled" href="./homework7/">homework7</a></li>
-				<li><a class="dropdown-item disabled" href="./homework8/">homework8</a></li>
-			</ul>
-		<a class="btn btn-secondary" href="https://github.com/Oporu/NUTC" title="Github">
-			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github btn-circle" viewBox="0 0 16 16">
-				<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-			</svg>
-		</a>
+	<div id="loading" class="text-center"><h1>loading...</h1>
+		<div class="d-flex justify-content-center align-items-center">
+			<div class="spinner-border text-primary spinner-border-sm" style="width: 300px; height: 300px;"
+				role="status">
+				<span class="visually-hidden">Loading...</span>
+			</div>
 		</div>
-		<a href="https://discord.gg/2xVf4c5ZPR"><img src="https://minecraft-mp.com/banner-311047-5.png"></a>
-	</center></font>
+	</div>
+	<div id="content" style="display: none">
+		<center><b><font size="7">
+			<div>班級: 資工二甲</div>
+			<div>學號: 1111032044</div>
+			<div>姓名: 劉柏緯</div></b>
+			<br>
+			<div id="visits"> </div>
+			<div class="dropdown-center">
+				<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="homeworks">
+			homeworks
+				</button>
+				<ul class="dropdown-menu dropdown-menu-dark bg-secondary">
+					<li><a class="dropdown-item text-white" href="./">homework1</a></li>
+					<li><a class="dropdown-item text-white" href="./homework2/">homework2</a></li>
+					<li><a class="dropdown-item text-white" href="./homework3/">homework3</a></li>
+					<li><a class="dropdown-item text-white" href="./homework4/">homework4</a></li>
+					<li><a class="dropdown-item text-white" href="./homework5/">homework5</a></li>
+					<li><a class="dropdown-item text-white" href="./homework6/">homework6</a></li>
+					<li><a class="dropdown-item disabled" href="./homework7/">homework7</a></li>
+					<li><a class="dropdown-item disabled" href="./homework8/">homework8</a></li>
+				</ul>
+			<a class="btn btn-secondary" href="https://github.com/Oporu/NUTC" title="Github">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github btn-circle" viewBox="0 0 16 16">
+					<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+				</svg>
+			</a>
+			</div>
+			<a href="https://discord.gg/2xVf4c5ZPR"><img src="https://minecraft-mp.com/banner-311047-5.png"></a>
+		</center></font>
+	</div>
+	<script src="script.js"></script>
 </body>
 </html>
