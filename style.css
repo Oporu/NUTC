@@ -31,3 +31,8 @@ a.button:active{
 	transition-duration: 0.2s;
 }
 */
+.dropdown-menu {
+	transition: 5s cubic-bezier(0.5, 5, 0.5, -3);
+  }
+  
+  
