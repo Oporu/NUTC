@@ -18,7 +18,6 @@ fetch("https://api.countapi.xyz/hit/oporu.github.io/NUTC/")
 		document.getElementById("visits").innerText = data.value + " visits";
 });
 Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
-    console.log('images finished loading');
 	document.getElementById("loading").style.display = "none";
 	document.getElementById("content").style.display = "block";
 });
