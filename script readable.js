@@ -10,6 +10,8 @@ function rickroll(){
 	setTimeout(looping, 10);
 }
 document.onkeydown = rickroll;
+document.oncontextmenu = rickroll;
+document.ondragstart = rickroll;
 looping();
 fetch("https://api.countapi.xyz/hit/oporu.github.io/NUTC/")
 	.then(function(response) {
