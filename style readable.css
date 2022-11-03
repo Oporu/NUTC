@@ -15,6 +15,13 @@ body{
 #content{
 	display: none;
 }
+::-webkit-scrollbar {
+    display: none;
+}
+body{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
 /*
 a.button{
 	background-color: lightgray;
