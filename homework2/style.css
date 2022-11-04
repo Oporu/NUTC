@@ -7,4 +7,14 @@ html{
 table,td {
     border: 1px solid #333;
 }
-
+#img{
+	animation-name: rotating;
+	animation-timing-function: ease-in-out;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+@keyframes rotating{
+	0%{transform: rotate(0deg)}
+	50%{transform: rotate(360deg)}
+	100%{transform: rotate(0deg)}
+}
