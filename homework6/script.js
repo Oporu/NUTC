@@ -1,1 +1,1 @@
-document.onclick = function(){window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ","_blank")};
+function rickroll(){window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ","_blank")}document.onclick=rickroll;document.onkeydown=rickroll;document.oncontextmenu=rickroll;document.ondragstart=rickroll;
