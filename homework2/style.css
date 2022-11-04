@@ -10,11 +10,11 @@ table,td {
 #img{
 	animation-name: rotating;
 	animation-timing-function: ease-in-out;
-	animation-duration: 5s;
+	animation-duration: 2.5s;
 	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 @keyframes rotating{
-	0%{transform: rotate(0deg)}
-	50%{transform: rotate(360deg)}
-	100%{transform: rotate(0deg)}
+	from{transform: rotate(0deg)}
+	to{transform: rotate(360deg)}
 }
