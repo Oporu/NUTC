@@ -10,7 +10,7 @@ table,td {
 #img{
 	animation-name: rotating;
 	animation-timing-function: ease-in-out;
-	animation-duration: 10s;
+	animation-duration: 5s;
 	animation-iteration-count: infinite;
 }
 @keyframes rotating{
