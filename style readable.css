@@ -16,11 +16,11 @@ body{
 	display: none;
 }
 ::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 body{
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
 }
 /*
 a.button{
