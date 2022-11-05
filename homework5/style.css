@@ -5,3 +5,25 @@ body{
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+#headerIcon:hover{
+    animation-name: headerIcon;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+#headerIcon:active{
+    animation-name: headerIconBack;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+@keyframes headerIcon{
+	from{transform: rotate(45deg)}
+	to{transform: rotate(405deg)}
+}
+@keyframes headerIconBack{
+	from{transform: rotate(450deg)}
+	to{transform: rotate(45deg)}
+}
