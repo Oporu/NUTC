@@ -13,6 +13,16 @@
 	</style>
 </head>
 <body>
-	<iframe src="./importMe.html" frameborder="0"></iframe>
+	<script>
+		if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  // true for mobile device
+  document.write("mobile device");
+  window.open("https://popcat.click")
+}else{
+  // false for not mobile device
+  document.write("not mobile device");
+}
+	</script>
+	<iframe src="https://popcat.click" frameborder="0" height="1000px" width="100%"></iframe>
 </body>
 </html>
