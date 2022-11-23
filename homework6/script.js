@@ -17,7 +17,8 @@ for(var s = 1; s < 10; s++){
 		r+="<tr>";
 	r+="<td>";
 	for (var m = 1; m < 10; m++){
-		r+= "<span class='left'>" + s.toString() + "*" + m.toString() + "=</span><span class='right'>" + (s*m).toString() + "<span class='left'><br>";
+		//r+= "<span class='left'>" + s.toString() + "*" + m.toString() + "=</span><span class='right'>" + (s*m).toString() + "<span class='left'><br>";
+		r+= "<span class='leftBox'><span class='left'>" + s.toString() + " * " + m.toString() + " = </span><span class='rightBox'><span class='right'>" + (s*m).toString() + "</span></span></span><br>";
 	}
 	r+="</td>";
 	if (s%3==0)

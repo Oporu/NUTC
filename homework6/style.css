@@ -17,17 +17,15 @@ table td{
 	background-color: #fff;
 	text-align: center;
 }
-ul{
-	display: table;
-	margin-right: auto;
-	margin-left: auto;
-}
 a{
 	background-color: lightgray;
 	color: black;
 	text-decoration: none;
 	transition-duration: 0.4s;
 	border-radius: 8px;
+	margin: 0 auto;
+	display: inline-block;
+	text-align: center;
 }
 a:hover{
 	background-color: gray;
@@ -36,14 +34,16 @@ a:active{
 	background-color: rgb(100, 100, 100);
 	transition-duration: 0.2s;
 }
-
 .left{
-	margin: 0 0;
-	padding: 0 0;
+	float: left;
 }
-
+.leftBox{
+	display: inline-block;
+}
+.rightBox{
+	display: inline-block;
+	width: 20px;
+}
 .right{
-	margin: 0 0;
-	padding: 0 0;
-	clear:left;
+	float: right;
 }
