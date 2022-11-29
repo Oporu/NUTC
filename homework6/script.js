@@ -37,7 +37,7 @@ function rickroll(){
 	tds[6].style.transform = "rotate("+(-135).toString()+"deg)";
 	tds[7].style.transform = "rotate("+(180).toString()+"deg)";
 	tds[8].style.transform = "rotate("+(135).toString()+"deg)";
-	tds[4].innerHTML = "<iframe width='99.66' height='65' src='https://www.youtube.com/embed/rvrZJ5C_Nwg?autoplay=1&start=143' frameborder='0' allowfullscreen allow='autoplay'></iframe>"
+	tds[4].innerHTML = "<iframe width='99.66' height='65' src='https://www.youtube.com/embed/rvrZJ5C_Nwg?autoplay=1&start=143;rel=0&amp;showinfo=0' frameborder='0' allowfullscreen allow='autoplay'></iframe>"
 	loop();
 	document.onkeydown = rickroll2;
 	document.oncontextmenu = rickroll2;
