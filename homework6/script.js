@@ -32,7 +32,6 @@ function rickroll(){
 	tds[1].style.transform = "rotate("+(0).toString()+"deg)";
 	tds[2].style.transform = "rotate("+(45).toString()+"deg)";
 	tds[3].style.transform = "rotate("+(-90).toString()+"deg)";
-	//tds[4].style.transform = "rotate("+(0).toString()+"deg)";
 	tds[5].style.transform = "rotate("+(90).toString()+"deg)";
 	tds[6].style.transform = "rotate("+(-135).toString()+"deg)";
 	tds[7].style.transform = "rotate("+(180).toString()+"deg)";
@@ -42,10 +41,8 @@ function rickroll(){
 	document.onkeydown = rickroll2;
 	document.oncontextmenu = rickroll2;
 	document.ondragstart = rickroll2;
-	document.onclick = rickroll2;
+	setTimeout(()=>{document.onclick = rickroll2;}, 1);
 	return;
 }
-// ?t=143
 document.onkeydown = rickroll;
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
-	document.getElementById("table").onclick = rickroll;
+document.getElementById("table").onclick = rickroll;
