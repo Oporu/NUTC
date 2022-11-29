@@ -25,7 +25,8 @@ function loop(){
 }loop.count=0
 function rickroll(){
 	for (i=0;i<tds.length;i++){
-		tds[i].innerHTML = "<iframe width='99.66' height='50' src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1' frameborder='0' allowfullscreen allow='autoplay'></iframe>"
+		if (i!=4)
+			tds[i].innerHTML = "<iframe width='99.66' height='50' src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1' frameborder='0' allowfullscreen allow='autoplay'></iframe>"
 	}
 	tds[0].style.transform = "rotate("+(-45).toString()+"deg)";
 	tds[1].style.transform = "rotate("+(0).toString()+"deg)";
@@ -36,6 +37,7 @@ function rickroll(){
 	tds[6].style.transform = "rotate("+(-135).toString()+"deg)";
 	tds[7].style.transform = "rotate("+(180).toString()+"deg)";
 	tds[8].style.transform = "rotate("+(135).toString()+"deg)";
+	tds[4].innerHTML = "<iframe width='99.66' height='50' src='https://www.youtube.com/embed/rvrZJ5C_Nwg?autoplay=1,t=143' frameborder='0' allowfullscreen allow='autoplay'></iframe>"
 	loop();
 	document.onkeydown = rickroll2;
 	document.oncontextmenu = rickroll2;
@@ -43,7 +45,7 @@ function rickroll(){
 	document.onclick = rickroll2;
 	return;
 }
-
+// ?t=143
 document.onkeydown = rickroll;
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
 	document.getElementById("table").onclick = rickroll;
