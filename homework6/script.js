@@ -45,3 +45,4 @@ function rickroll(){
 }
 
 document.onkeydown = rickroll;
+document.getElementById("table").onclick = rickroll;
