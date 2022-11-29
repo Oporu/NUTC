@@ -45,4 +45,5 @@ function rickroll(){
 }
 
 document.onkeydown = rickroll;
-document.getElementById("table").onclick = rickroll;
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+	document.getElementById("table").onclick = rickroll;
