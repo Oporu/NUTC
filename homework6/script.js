@@ -14,15 +14,30 @@ for(var slot = 1; slot < 10; slot++){
 }
 r+="</table>";
 document.write(r);
+tds = document.getElementsByTagName("td")
 function rickroll2(){
 	window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ","_blank");
-	document.documentElement.innerHTML += ("<center><iframe width='300' height='200' src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1' frameborder='0' allowfullscreen allow='autoplay'></iframe></center>")
 }
+function loop(){
+	loop.count= (loop.count+1)%360
+	tds[4].style.transform = "rotate("+(loop.count).toString()+"deg)";
+	setTimeout(loop,10);
+}loop.count=0
 function rickroll(){
-	tds = document.getElementsByTagName("td")
-	for (i=0;i<tds.length;i++)
-		tds[i].innerHTML = "<iframe width='99.66' height='204.6' src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1' frameborder='0' allowfullscreen allow='autoplay'></iframe>"
-	document.onkeydown = null;
+	for (i=0;i<tds.length;i++){
+		tds[i].innerHTML = "<iframe width='99.66' height='20' src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1' frameborder='0' allowfullscreen allow='autoplay'></iframe>"
+	}
+	tds[0].style.transform = "rotate("+(-45).toString()+"deg)";
+	tds[1].style.transform = "rotate("+(0).toString()+"deg)";
+	tds[2].style.transform = "rotate("+(45).toString()+"deg)";
+	tds[3].style.transform = "rotate("+(-90).toString()+"deg)";
+	tds[4].style.transform = "rotate("+(0).toString()+"deg)";
+	tds[5].style.transform = "rotate("+(90).toString()+"deg)";
+	tds[6].style.transform = "rotate("+(-135).toString()+"deg)";
+	tds[7].style.transform = "rotate("+(180).toString()+"deg)";
+	tds[8].style.transform = "rotate("+(135).toString()+"deg)";
+	loop()
 	return;
 }
+
 document.onkeydown = rickroll;
