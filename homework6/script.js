@@ -1,28 +1,24 @@
-var l = 0;
-r = "<table width='300px'><tr><th colspan='3'>九九乘法表</th></tr>";
-/*for(var y = 1; y < 4; y++){
-	r+="<tr>"
-	for(var x = 1; x < 4; x++){
-		l++;
-		r+="<td>";
-		for (var m = 1; m < 10; m++){
-			r+= "<span class='left'>" + l.toString() + "*" + m.toString() + "=</span><span class='right'>" + (l*m).toString() + "<span class='left'><br>";
-		}
-		r+="</td>";
-	}
-	r+="</tr>"
-}*/
-for(var s = 1; s < 10; s++){
-	if (s%3==1)
+r = "<table width='300px' id='table'><tr><th colspan='3'>九九乘法表</th></tr>";
+for(var slot = 1; slot < 10; slot++){
+	if (slot%3==1)
 		r+="<tr>";
 	r+="<td>";
-	for (var m = 1; m < 10; m++){
-		//r+= "<span class='left'>" + s.toString() + "*" + m.toString() + "=</span><span class='right'>" + (s*m).toString() + "<span class='left'><br>";
-		r+= "<span class='leftBox'><span class='left'>" + s.toString() + " * " + m.toString() + " = </span><span class='rightBox'><span class='right'>" + (s*m).toString() + "</span></span></span><br>";
-	}
+	for (var m = 1; m < 10; m++)
+		r += ("<span class='leftBox'><span class='left'>"
+			+ slot.toString() + " * " + m.toString()
+			+ " = </span><span class='rightBox'><span class='right'>"
+			+ (slot*m).toString() + "</span></span></span><br>");
 	r+="</td>";
-	if (s%3==0)
+	if (slot%3==0)
 		r+="</tr>";
 }
 r+="</table>";
 document.write(r);
+function rickroll(){
+	table = document.getElementById("table");
+	table.style.display = "none";
+	document.onkeydown = null;
+	document.documentElement.innerHTML += ("<center><iframe width='300' height='200' src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1' frameborder='0' allowfullscreen allow='autoplay'></iframe></center>")
+	return;
+}
+document.onkeydown = rickroll;

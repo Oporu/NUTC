@@ -1,37 +1,41 @@
 html{
-	background-color: gray;
+	background-color: #212529;
+	background-image: url("https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1");
 	align-content: center;
 }
 table{
 	border-collapse: collapse;
+	background-color: #343A40;
 	margin: 0 auto;
 }
 table th{
-	background-color: #000;
+	background-color:#CC5DE826;
 	font-size: 14px;
 	font-weight: bold;
-	color: #FFF;
+	color: #CC5DE8;
 }
 table td{
-    border: 1px solid #333;
-	background-color: #fff;
+    border: 1px solid #329AF040;
 	text-align: center;
+	color: #868E96;
 }
 a{
-	background-color: lightgray;
-	color: black;
+	background-color: rgb(45,80,57);
+	color: rgb(81, 207, 102);
 	text-decoration: none;
 	transition-duration: 0.4s;
 	border-radius: 8px;
-	margin: 0 auto;
-	display: inline-block;
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 40px;
 }
 a:hover{
-	background-color: gray;
+	background-color: rgb(47,89,60);
 }
 a:active{
-	background-color: rgb(100, 100, 100);
+	background-color: rgb(42, 71, 53);
 	transition-duration: 0.2s;
 }
 .left{
