@@ -25,7 +25,7 @@ function loop(){
 }loop.count=0
 function rickroll(){
 	for (i=0;i<tds.length;i++){
-		tds[i].innerHTML = "<iframe width='99.66' height='20' src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1' frameborder='0' allowfullscreen allow='autoplay'></iframe>"
+		tds[i].innerHTML = "<iframe width='99.66' height='50' src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1' frameborder='0' allowfullscreen allow='autoplay'></iframe>"
 	}
 	tds[0].style.transform = "rotate("+(-45).toString()+"deg)";
 	tds[1].style.transform = "rotate("+(0).toString()+"deg)";
