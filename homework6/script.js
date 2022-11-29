@@ -26,8 +26,6 @@ function rickroll(){
 	document.oncontextmenu = rickroll2;
 	document.ondragstart = rickroll2;
 	document.onclick = rickroll2;
-	document.onwheel = rickroll2;
-
 	return;
 }
 document.onkeydown = rickroll;
