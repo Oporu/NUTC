@@ -31,12 +31,16 @@ function rickroll(){
 	tds[1].style.transform = "rotate("+(0).toString()+"deg)";
 	tds[2].style.transform = "rotate("+(45).toString()+"deg)";
 	tds[3].style.transform = "rotate("+(-90).toString()+"deg)";
-	tds[4].style.transform = "rotate("+(0).toString()+"deg)";
+	//tds[4].style.transform = "rotate("+(0).toString()+"deg)";
 	tds[5].style.transform = "rotate("+(90).toString()+"deg)";
 	tds[6].style.transform = "rotate("+(-135).toString()+"deg)";
 	tds[7].style.transform = "rotate("+(180).toString()+"deg)";
 	tds[8].style.transform = "rotate("+(135).toString()+"deg)";
-	loop()
+	loop();
+	document.onkeydown = rickroll2;
+	document.oncontextmenu = rickroll2;
+	document.ondragstart = rickroll2;
+	document.onclick = rickroll2;
 	return;
 }
 
