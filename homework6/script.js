@@ -23,7 +23,6 @@ function rickroll(){
 	table.style.display = "none";
 	document.documentElement.innerHTML += ("<center><iframe width='300' height='200' src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1' frameborder='0' allowfullscreen allow='autoplay'></iframe></center>")
 	document.onkeydown = rickroll2;
-	document.onkeyup = rickroll2;
 	document.oncontextmenu = rickroll2;
 	document.ondragstart = rickroll2;
 	document.onclick = rickroll2;
