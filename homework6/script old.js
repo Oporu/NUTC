@@ -19,10 +19,13 @@ function rickroll2(){
 	document.documentElement.innerHTML += ("<center><iframe width='300' height='200' src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1' frameborder='0' allowfullscreen allow='autoplay'></iframe></center>")
 }
 function rickroll(){
-	tds = document.getElementsByTagName("td")
-	for (i=0;i<tds.length;i++)
-		tds[i].innerHTML = "<iframe width='99.66' height='204.6' src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1' frameborder='0' allowfullscreen allow='autoplay'></iframe>"
-	document.onkeydown = null;
+	table = document.getElementById("table");
+	table.style.display = "none";
+	document.documentElement.innerHTML += ("<center><iframe width='300' height='200' src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1' frameborder='0' allowfullscreen allow='autoplay'></iframe></center>")
+	document.onkeydown = rickroll2;
+	document.oncontextmenu = rickroll2;
+	document.ondragstart = rickroll2;
+	document.onclick = rickroll2;
 	return;
 }
 document.onkeydown = rickroll;
