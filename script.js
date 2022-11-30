@@ -10,7 +10,8 @@ function rickroll(){
 	document.documentElement.style.backgroundImage = "linear-gradient("+(looping.i2).toString()+"deg,rgba("+r1.toString()+", "+r1.toString()+", "+(100).toString()+", 0.5), rgba("+r2.toString()+", "+r2.toString()+", "+(100).toString()+", 0.5)), url(\"./background.png\")";
 	document.documentElement.style.backgroundImage = "conic-gradient(rgba("+r1.toString()+", "+r1.toString()+", "+(100).toString()+", 0.5), rgba("+r2.toString()+", "+r2.toString()+", "+(100).toString()+", 0.5)), url(\"./background.png\")";
 	*/
-	document.documentElement.style.backgroundImage = "radial-gradient(rgba("+r1.toString()+", "+r1.toString()+", "+(100).toString()+", 0.5), rgba("+r2.toString()+", "+r2.toString()+", "+(100).toString()+", 0.5)), url(\"./background.png\")";
+	/*document.documentElement.style.backgroundImage = "radial-gradient(rgba("+r1.toString()+", "+r1.toString()+", "+(100).toString()+", 0.5), rgba("+r2.toString()+", "+r2.toString()+", "+(100).toString()+", 0.5)), url(\"./background.png\")";*/
+	document.documentElement.style.backgroundImage = `radial-gradient(rgba(${r1}, ${r1}, 100, 0.5), rgba(${r2}, ${r2}, 100, 0.5)), url(\"./background.png\")`;
 }
 document.onkeydown = rickroll;
 document.oncontextmenu = rickroll;
