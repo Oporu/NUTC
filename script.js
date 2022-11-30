@@ -17,9 +17,9 @@ document.oncontextmenu = rickroll;
 document.ondragstart = rickroll;
 setInterval(looping,10);
 fetch("https://api.countapi.xyz/hit/oporu.github.io/NUTC/")
-	.then(function(response) {
+	.then((response)=>{
 		return response.json();
-	}).then(function(data) {
+	}).then((data)=>{
 		document.getElementById("visits").innerText = data.value + " visits";
 });
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
