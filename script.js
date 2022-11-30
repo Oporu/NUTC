@@ -11,13 +11,11 @@ function rickroll(){
 	document.documentElement.style.backgroundImage = "conic-gradient(rgba("+r1.toString()+", "+r1.toString()+", "+(100).toString()+", 0.5), rgba("+r2.toString()+", "+r2.toString()+", "+(100).toString()+", 0.5)), url(\"./background.png\")";
 	*/
 	document.documentElement.style.backgroundImage = "radial-gradient(rgba("+r1.toString()+", "+r1.toString()+", "+(100).toString()+", 0.5), rgba("+r2.toString()+", "+r2.toString()+", "+(100).toString()+", 0.5)), url(\"./background.png\")";
-	
-	setTimeout(looping, 10);
 }
 document.onkeydown = rickroll;
 document.oncontextmenu = rickroll;
 document.ondragstart = rickroll;
-looping();
+setInterval(looping,10);
 fetch("https://api.countapi.xyz/hit/oporu.github.io/NUTC/")
 	.then(function(response) {
 		return response.json();
