@@ -11,8 +11,11 @@
 	<div>c = <span id="cSpace"></span></div>
 	<script>
 		varBox = (new URL(document.URL)).searchParams;
-		c = varBox.get("c");
-		document.getElementById("cSpace").innerText = c;
+		c = Number(varBox.get("c"));
+		if (!Number.isInteger(c))
+			c = 0;
+		document.getElementById("cSpace").innerText = `${c}`;
+		document.location.href = document.location.hostname + `?c=${c+1}` 
 	</script>
 </body>
 </html>
