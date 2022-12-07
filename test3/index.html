@@ -12,8 +12,7 @@
 	<script>
 		varBox = (new URL(document.URL)).searchParams;
 		c = Number(varBox.get("c"));
-		if (!Number.isInteger(c))
-			c = 0;
+		if (!Number.isInteger(c)) c = 0;
 		document.getElementById("cSpace").innerText = c.toString();
 		document.location.href = document.location.hostname + `?c=${c+1}` 
 	</script>
