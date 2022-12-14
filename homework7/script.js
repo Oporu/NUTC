@@ -2,7 +2,7 @@ total = 0
 function addToCart(){
 	product = document.getElementById("product").value;
 	price = Number(document.getElementById("price").value);
-	if (!Number.isInteger(price)) return alert("invaild amount input");
+	if (!Number.isFinite(price)) return alert("invaild amount input");
 	if (product=="") return alert("invaild product name");
 
 	if (typeof(cartStuff[product]) !== "undefined") return alert ("產品已經存在");

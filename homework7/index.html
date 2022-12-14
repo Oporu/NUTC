@@ -14,26 +14,26 @@
 </head>
 <body>
 	<br>
-	<div class="container align-items-center text-center">
-		<div class="bg-secondary text-white py-2">購物車範例</div>
-		<div class="container-fluid justify-items-left">
+	<div class="container">
+		<div class="bg-secondary text-white py-2 bold text-center">購物車範例</div>
+		<div>
 			<input type="text" name="product" id="product" placeholder="商品名稱"><input type="number" name="" id="price" placeholder="單價"><button class="btn btn-primary" onclick="addToCart();">增</button>
 		</div>
 		<table class="container-fluid" id="cart">
-			<tr class="bg-secondary text-white">
+			<tr class="bg-secondary text-white bold">
 				<td>功能</td>
 				<td>商品名稱</td>
 				<td>數量</td>
 				<td>單價</td>
 				<td>小計</td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td><button type="button" name="" id="" class="btn btn-warning">刪</button></td>
 				<td>1</td>
 				<td>1</td>
 				<td>1</td>
 				<td>1</td>
-			</tr>
+			</tr> -->
 		</table>
 		<div>總計:<span id="total">0</span>元</div>
 	</div>

@@ -1,2 +1,7 @@
-html{
-	background-color: rgb(70, 70, 70);}
+html,body{
+	background-color: #212529;
+	color: white;
+}
+.bold{
+	font-weight: bold;
+}
