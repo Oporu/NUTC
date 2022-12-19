@@ -15,9 +15,12 @@
 <body>
 	<br>
 	<div class="container">
+		<center><a name="" id="" class="btn btn-primary" href="../" role="button">回到首頁</a></center>
 		<div class="bg-secondary text-white py-2 bold text-center">購物車範例</div>
-		<div>
-			<input type="text" name="product" id="product" placeholder="商品名稱"><input type="number" name="" id="price" placeholder="單價"><button class="btn btn-primary" onclick="addToCart();">增</button>
+		<div class="input-group" style="width: 500px">
+			<input type="text" class="form-control" placeholder="商品名稱(必填)" id="product">
+			<input type="number" class="form-control" placeholder="單價" id="price">
+			<button class="btn btn-primary" onclick="addToCart();" type="button">增</button>
 		</div>
 		<table class="container-fluid" id="cart">
 			<tr class="bg-secondary text-white bold">
@@ -27,15 +30,9 @@
 				<td>單價</td>
 				<td>小計</td>
 			</tr>
-			<!-- <tr>
-				<td><button type="button" name="" id="" class="btn btn-warning">刪</button></td>
-				<td>1</td>
-				<td>1</td>
-				<td>1</td>
-				<td>1</td>
-			</tr> -->
 		</table>
-		<div>總計:<span id="total">0</span>元</div>
+		
+		<div class="d-flex justify-content-end border-top">總計:<span id="total">0</span>元</div>
 	</div>
 </body>
 </html>
