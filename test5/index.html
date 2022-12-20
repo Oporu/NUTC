@@ -9,21 +9,21 @@
 <body>
 	<span id="abc"></span>
 	<script>
-		sampleJson = {"abc哈哈你好@#$%^&*()?><MNJKL:}{":123,"bca":231,"aaa":111}
+		sampleJson = {"abc哈哈你好@#$%^&*()?><MNJKL:}{":123,"bca":231,"aaa":111};
 		function getTest(i){
 			// i: Json
 			//new TextEncoder().encode(JSON.stringify(i)).toString()
-			return new TextEncoder().encode(JSON.stringify(i)).toString()
+			return new TextEncoder().encode(JSON.stringify(i)).toString();
 		}
 		function getTest2(i){
-			return JSON.parse(new TextDecoder().decode(new Uint8Array(i.split(","))))
+			return JSON.parse(new TextDecoder().decode(new Uint8Array(i.split(","))));
 		}
-		test = new URL(document.URL).hash.substring(1)
-		test2 = getTest2(test)
-		test3 = Object.entries(test2)
-		test4 = (Object.keys(test2))
-		abc = document.getElementById("abc")
-		abc.innerText = test4
+		test = new URL(document.URL).hash.substring(1);
+		test2 = getTest2(test);
+		test3 = Object.entries(test2);
+		test4 = (Object.keys(test2));
+		abc = document.getElementById("abc");
+		abc.innerText = test4;
 	</script>
 </body>
 </html>

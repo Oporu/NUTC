@@ -11,7 +11,7 @@ function addToCart(){
 	document.getElementById("product").value = "";
 	cart = document.getElementById("cart");
 	//cart.innerHTML += `<tr id="a-${product}"><td><button type="button" name='${product}' id="" class="btn btn-warning" onclick="removeFromCart(this.name);">刪</button></td><td>${product}</td><td>1(數量)</td><td>${price}</td><td>${price}</td></tr>`;
-	cart.innerHTML += `<tr id="a-${product}"><td><button type="button" name='${product}' class="btn btn-warning" onclick="removeFromCart(this.name);">刪</button></td><td class="text-break">${product}</td><td><input type="number" class="productAmount" name='${product}' min="1" step="1" value="1" placeholder="數量" onchange="updateAmount(this);"></td><td class="productPrice">${price}</td><td class="productFinalPrice">${price}</td></tr>`;
+	cart.innerHTML += `<tr id="a-${product}"><td><button type="button" name='${product}' class="btn btn-warning" onclick="removeFromCart(this.name);">刪</button></td><td class="text-break">${product}</td><td><input type="number" class="productAmount" name='${product}' min="1" step="1" value="1" placeholder="數量" onchange="updateAmount(this);"></td><td><div class="productPrice float-end">${price}</div></td><td><div class="float-end productFinalPrice">${price}</div></td></tr>`;
 
 	cartStuff[product] = {"price": price, "amount": 1}
 	updateTotal();
