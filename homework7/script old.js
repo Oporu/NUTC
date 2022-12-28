@@ -1,11 +1,8 @@
-function enc(i){
-	return [...new TextEncoder().encode(JSON.stringify(i))].map(e=>{return e.toString(36);}).join("|")
-}
-function dec(i){
-	return JSON.parse(new TextDecoder().decode(new Uint8Array(i.split("|").map((e)=>{return parseInt(e,36)}))));
-}
+function enc(i){return new TextEncoder().encode(JSON.stringify(i)).toString();}
+function dec(i){return JSON.parse(new TextDecoder().decode(new Uint8Array(i.split(","))));}
+test = new URL(document.URL).hash.substring(1);
 function loadFromHash(){
-	temp = dec(window.location.hash.substring(1));
+	temp = dec(new URL(document.URL).hash.substring(1));
 	for (i in temp){
 		addToCart(i,temp[i]["price"]);
 		cartStuff[i]["amount"] = temp[i]["amount"];
