@@ -1,10 +1,28 @@
-total = 0
-function addToCart(){
-	product = document.getElementById("product").value;
-	price = Number(document.getElementById("price").value);
-	if (product==="" || product.includes('"') || product.includes("'")) return alert("不可用的商品名稱");
-	if (typeof(cartStuff[product]) !== "undefined") return alert("商品已經存在");
-	if (!Number.isFinite(price)) return alert("不可用的數量");
+function enc(i){return new TextEncoder().encode(JSON.stringify(i)).toString();}
+function dec(i){return JSON.parse(new TextDecoder().decode(new Uint8Array(i.split(","))));}
+test = new URL(document.URL).hash.substring(1);
+function loadFromHash(){
+	temp = dec(new URL(document.URL).hash.substring(1));
+	for (i in temp){
+		addToCart(i,temp[i]["price"]);
+		cartStuff[i]["amount"] = temp[i]["amount"];
+	}
+	for (product in cartStuff){
+		document.getElementById(`a-${product}`).getElementsByClassName("productAmount")[0].value = cartStuff[product]["amount"];
+	}
+}
+/**/
+total = 0;
+function addToCart_button(){
+	if (!addToCart((document.getElementById("product").value),(Number(document.getElementById("price").value)))){
+		document.getElementById("price").value = "";
+		document.getElementById("product").value = "";
+	}
+}
+function addToCart(product, price){
+	if (product==="" || product.includes('"') || product.includes("'")) {alert("不可用的商品名稱"); return false};
+	if (typeof(cartStuff[product]) !== "undefined") {alert("商品已經存在"); return false};
+	if (!Number.isFinite(price)) {alert("不可用的數量"); return false};
 	if (price<=0) alert("這麼好哦");
 
 	document.getElementById("price").value = "";
@@ -17,6 +35,7 @@ function addToCart(){
 	for (product in cartStuff){
 		document.getElementById(`a-${product}`).getElementsByClassName("productAmount")[0].value = cartStuff[product]["amount"];
 	}
+	return true;
 }
 function updateTotal(){
 	total = 0;
@@ -24,6 +43,7 @@ function updateTotal(){
 		total += cartStuff[product].price * cartStuff[product].amount;
 	}
 	document.getElementById("total").innerText = total.toString();
+	updateCopy();
 }
 function updateAmount(self){
 	if (!Number.isInteger(self.value)) self.value = Math.max(Math.floor(self.value),1);
@@ -36,5 +56,11 @@ function removeFromCart(self){
 	delete cartStuff[self.name];
 	updateTotal();
 }
-cartStuff = {}
-window.onload = updateTotal
+function updateCopy(){
+	document.getElementById("hash").innerText = (new URL(document.URL)).pathname + enc(cartStuff);
+}
+cartStuff = {};
+window.onload = ()=>{
+	loadFromHash();
+	updateTotal()
+};

@@ -10,6 +10,8 @@ function addToCart(){
 	document.getElementById("price").value = "";
 	document.getElementById("product").value = "";
 	cart = document.getElementById("cart");
+	//cart.innerHTML += `<tr id="a-${product}"><td><button type="button" name='${product}' id="" class="btn btn-warning" onclick="removeFromCart(this.name);">刪</button></td><td>${product}</td><td>1(數量)</td><td>${price}</td><td>${price}</td></tr>`;
+	//cart.innerHTML += `<tr id="a-${product}"><td><button type="button" name='${product}' class="btn btn-warning" onclick="removeFromCart(this.name);">刪</button></td><td class="text-break">${product}</td><td><input type="number" class="productAmount" name='${product}' min="1" step="1" value="1" placeholder="數量" onchange="updateAmount(this);"></td><td><div class="productPrice float-end">${price}</div></td><td><div class="float-end productFinalPrice">${price}</div></td></tr>`;
 	cart.innerHTML += `<tr id="a-${product}"><td><button type="button" name='${product}' class="btn btn-warning" onclick="removeFromCart(this);">刪</button></td><td class="text-break">${product}</td><td><input type="number" class="productAmount" name='${product}' min="1" step="1" value="1" placeholder="數量" onchange="updateAmount(this);"></td><td><div class="productPrice float-end">${price}</div></td><td><div class="float-end productFinalPrice">${price}</div></td></tr>`;
 
 	cartStuff[product] = {"price": price, "amount": 1}
@@ -28,11 +30,21 @@ function updateTotal(){
 function updateAmount(self){
 	if (!Number.isInteger(self.value)) self.value = Math.max(Math.floor(self.value),1);
 	cartStuff[self.name]["amount"] = self.value;
-	self.parentNode.parentNode.getElementsByClassName("productFinalPrice")[0].innerHTML = self.value*cartStuff[self.name]["price"];
+	document.getElementById(`a-${self.name}`).getElementsByClassName("productFinalPrice")[0].innerHTML = self.value*cartStuff[self.name]["price"];
+	updateTotal();
+
+	//
+}
+function removeFromCartOld(product){
+	document.getElementById(`a-${product}`).remove();
+	delete cartStuff[product];
 	updateTotal();
 }
 function removeFromCart(self){
 	self.parentNode.parentNode.remove();
+	console.log(self)
+	console.log(self.parentNode)
+	console.log(self.parentNode.parentNode)
 	delete cartStuff[self.name];
 	updateTotal();
 }
