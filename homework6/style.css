@@ -50,3 +50,14 @@ a:active{
 .right{
 	float: right;
 }
+.middleRoll{
+	animation: middleRoll 5s linear 0s infinite normal;
+}
+@keyframes middleRoll{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
